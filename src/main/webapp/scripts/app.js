@@ -7,15 +7,19 @@ var cityApp = angular.module( 'CityWebsite', [
 cityApp.config( ['$routeProvider',
                      function ( $routeProvider ) {
                          $routeProvider.
-                                 when( '/tables', {
-                                     templateUrl: 'partials/entityTables.html',
-                                     controller: 'tablesCtrl'
+                                 when( '/cityTable', {
+                                     templateUrl: 'partials/entityTableCity.html',
+                                     controller: 'CityTablesCtrl'
+                                 } ).
+                                 when( '/locationTable', {
+                                     templateUrl: 'partials/entityTableLocation.html',
+                                     controller: 'LocationTableCtrl'
                                  } ).
                                  when( '/generate', {
                                      templateUrl: 'partials/generateEntity.html',
                                      controller: 'generateCtrl'
                                  } ).
                                  otherwise( {
-                                     redirectTo: '/tables'
+                                     redirectTo: '/cityTable'
                                  } );
                      }] );

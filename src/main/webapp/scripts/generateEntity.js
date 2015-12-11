@@ -5,7 +5,6 @@ cityApp.controller( 'generateCtrl', ['$scope', '$http', '$routeParams',
                                                   function ( $scope, $http, $routeParams ) {
 
 
-
                                                       $scope.generateCity= function(){
 
 
@@ -17,6 +16,23 @@ cityApp.controller( 'generateCtrl', ['$scope', '$http', '$routeParams',
 
                                                       }
 
+                                                      $scope.generateLocation= function(){
+
+
+                                                          $http.put('../service/location/create/'
+                                                                    + $scope.locationName +'/'
+                                                                    + $scope.locationCityId +'/'
+                                                                    + $scope.locationStreet +'/'
+                                                                    + $scope.locationPhonenumber +'/'
+                                                                    + $scope.locationGPS +'/'
+                                                                    + $scope.locationDescription +'/'
+                                                                    + $scope.locationHousenumber ).success( function ( data ) {
+
+                                                              location.reload();
+
+                                                          } );
+
+                                                      }
 
 
                                                   }] );

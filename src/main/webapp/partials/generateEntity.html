@@ -13,6 +13,10 @@
                 <button class="btn btn-default" data-toggle="modal" data-target="#createCity">create City
                 </button>
             </div>
+            <div>
+                <button class="btn btn-default" data-toggle="modal" data-target="#createLocation">create Location
+                </button>
+            </div>
             </div>
         </div>
     </div>
@@ -23,7 +27,7 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
                         class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="AddUserLabel">Create City</h4>
+                <h4 class="modal-title" id="AddCityLabel">Create City</h4>
             </div>
             <form class="form-horizontal" name="addForm">
                 <div class="modal-body">
@@ -38,6 +42,75 @@
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-primary" ng-click="generateCity()">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="createLocation" tabindex="-1" role="dialog" aria-labelledby="createCity" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="AddLocationLabel">Create Location</h4>
+            </div>
+            <form class="form-horizontal" name="addForm">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="cityName" class="col-sm-3 control-label">Location Name</label>
+
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="locationName" placeholder="locationName"
+                                   ng-model="locationName" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cityName" class="col-sm-3 control-label">CityId</label>
+
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="locationCityId" placeholder="locationCityId"
+                                   ng-model="locationCityId" required>
+                        </div>
+                    </div>    <div class="form-group">
+                    <label for="cityName" class="col-sm-3 control-label">Street</label>
+
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="locationStreet" placeholder="locationStreet"
+                               ng-model="locationStreet" required>
+                    </div>
+                </div>    <div class="form-group">
+                    <label for="cityName" class="col-sm-3 control-label">Housenumber</label>
+
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="locationHousenumber" placeholder="locationHousenumber"
+                               ng-model="locationHousenumber" required>
+                    </div>
+                </div>    <div class="form-group">
+                    <label for="cityName" class="col-sm-3 control-label">Phonenumber</label>
+
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="locationPhonenumber" placeholder="locationPhonenumber"
+                               ng-model="locationPhonenumber" required>
+                    </div>
+                </div>    <div class="form-group">
+                    <label for="cityName" class="col-sm-3 control-label">GPS</label>
+
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="locationGPS" placeholder="locationGPS"
+                               ng-model="locationGPS" required>
+                    </div>
+                </div>    <div class="form-group">
+                    <label for="cityName" class="col-sm-3 control-label">Description</label>
+
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="locationDescription" placeholder="locationDescription"
+                               ng-model="locationDescription" required>
+                    </div>
+                </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" ng-click="generateLocation()">Save</button>
                 </div>
             </form>
         </div>
