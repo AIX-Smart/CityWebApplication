@@ -21,3 +21,13 @@ cityApp.controller( 'LocationTableCtrl', ['$scope', '$http', '$routeParams',
                                           } );
 
                                       }] );
+cityApp.controller( 'EventTableCtrl', ['$scope', '$http', '$routeParams',
+                                          function ( $scope, $http, $routeParams ) {
+
+                                              $http.get('../service/event/getAllPosts' ).success( function ( data ) {
+
+                                                  $scope.events = data;
+
+                                              } );
+
+                                          }] );

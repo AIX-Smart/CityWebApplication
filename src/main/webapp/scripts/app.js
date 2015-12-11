@@ -9,11 +9,15 @@ cityApp.config( ['$routeProvider',
                          $routeProvider.
                                  when( '/cityTable', {
                                      templateUrl: 'partials/entityTableCity.html',
-                                     controller: 'CityTablesCtrl'
+                                     controller: 'CityTableCtrl'
                                  } ).
                                  when( '/locationTable', {
                                      templateUrl: 'partials/entityTableLocation.html',
                                      controller: 'LocationTableCtrl'
+                                 } ).
+                                 when( '/eventTable', {
+                                     templateUrl: 'partials/entityTableEvent.html',
+                                     controller: 'EventTableCtrl'
                                  } ).
                                  when( '/generate', {
                                      templateUrl: 'partials/generateEntity.html',

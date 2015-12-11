@@ -4,7 +4,7 @@
             <div class="panel-heading">
                 <div class="row">
                     <div class="col-md-11">
-                        <h4>Location</h4>
+                        <h4>Events</h4>
                     </div>
                 </div>
             </div>
@@ -13,11 +13,11 @@
                 <table class="table">
                     <thead>
                     <tr>
-                        <th>Name</th>
+                        <th>Description</th>
                     </thead>
                     <tbody>
-                    <tr ng-repeat="location in locations">
-                        <td>{{location.name}}</td>
+                    <tr ng-repeat="event in events">
+                        <td>{{event.content}}</td>
                     </tr>
                     </tbody>
                 </table>
