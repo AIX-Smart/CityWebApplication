@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="war" name="CityWebApplication:war">
     <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="City-1.0-SNAPSHOT.war">
+    <root id="archive" name="CityWeb-1.0-SNAPSHOT.war">
       <element id="artifact" artifact-name="CityWebApplication:war exploded" />
     </root>
   </artifact>

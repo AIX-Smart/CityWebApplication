@@ -6,10 +6,10 @@ timetrackerControllers.controller( 'generateCtrl', ['$scope', '$http', '$routePa
 
 
 
-                                                      $scope.generateCity= function(ctiyName){
+                                                      $scope.generateCity= function(){
 
 
-                                                          $http.put('../service/city/' + cityName ).success( function ( data ) {
+                                                          $http.put('../service/city/' + $scope.cityName ).success( function ( data ) {
 
                                                               location.reload();
 
