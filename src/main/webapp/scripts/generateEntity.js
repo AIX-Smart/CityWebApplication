@@ -5,18 +5,15 @@ timetrackerControllers.controller( 'generateCtrl', ['$scope', '$http', '$routePa
                                                   function ( $scope, $http, $routeParams ) {
 
 
-                                                      $http.get( '../service/users/'
-                                                                 + $routeParams.userId ).success( function ( data ) {
-                                                          $scope.user = data;
 
-                                                      } );
+                                                      $scope.generateCity= function(ctiyName){
 
 
-                                                      $scope.generateCity= function(newCity){
+                                                          $http.put('../service/city/' + cityName ).success( function ( data ) {
 
-                                                          newCity.id = 1;
+                                                              location.reload();
 
-                                                          $http.put('../service/city/create', newCity )
+                                                          } );
 
                                                       }
 
