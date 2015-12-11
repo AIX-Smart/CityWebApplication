@@ -34,5 +34,19 @@ cityApp.controller( 'generateCtrl', ['$scope', '$http', '$routeParams',
 
                                                       }
 
+                                                      $scope.generatePost= function(){
+
+
+                                                          $http.post('../service/location/'
+                                                              + $scope.postUserId +'/'
+                                                              + $scope.postLocationId +'/'
+                                                              + $scope.postContent +'/').success( function ( data ) {
+
+                                                              location.reload();
+
+                                                          } );
+
+                                                      }
+
 
                                                   }] );

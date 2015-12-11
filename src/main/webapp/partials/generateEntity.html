@@ -17,6 +17,10 @@
                 <button class="btn btn-default" data-toggle="modal" data-target="#createLocation">create Location
                 </button>
             </div>
+            <div>
+                <button class="btn btn-default" data-toggle="modal" data-target="#createPost">create Post
+                </button>
+            </div>
             </div>
         </div>
     </div>
@@ -111,6 +115,49 @@
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-primary" ng-click="generateLocation()">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="createPost" tabindex="-1" role="dialog" aria-labelledby="createPost" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="AddPostLabel">Create Post</h4>
+            </div>
+            <form class="form-horizontal" name="addForm">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="cityName" class="col-sm-3 control-label">Post UserId</label>
+
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="postUserId" placeholder="postUserId"
+                                   ng-model="postUserId" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                    <label for="cityName" class="col-sm-3 control-label">Post Content</label>
+
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="postContent" placeholder="postContent"
+                               ng-model="postContent" required>
+                    </div>
+                </div>
+                    <div class="form-group">
+                        <label for="cityName" class="col-sm-3 control-label">Post LocationId</label>
+
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="postLocationId" placeholder="postLocationId"
+                                   ng-model="postLocationId" required>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" ng-click="generatePost()">Save</button>
                 </div>
             </form>
         </div>
