@@ -48,5 +48,17 @@ cityApp.controller( 'generateCtrl', ['$scope', '$http', '$routeParams',
 
                                                       }
 
+                                                      $scope.likePost= function(){
+
+                                                          $http.put('../service/event/'
+                                                              + $scope.likeEventId + '/'
+                                                              + $scope.likeUserId , 'true').success( function ( data ) {
+
+                                                              location.reload();
+                                                          });
+
+
+                                                          }
+
 
                                                   }] );
