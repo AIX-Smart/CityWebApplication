@@ -31,3 +31,14 @@ cityApp.controller( 'EventTableCtrl', ['$scope', '$http', '$routeParams',
                                               } );
 
                                           }] );
+
+cityApp.controller( 'CommentTableCtrl', ['$scope', '$http', '$routeParams',
+    function ( $scope, $http, $routeParams ) {
+
+        $http.get('../service/comment/getAllComments' ).success( function ( data ) {
+
+            $scope.comments = data;
+
+        } );
+
+    }] );

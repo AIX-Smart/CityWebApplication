@@ -52,13 +52,24 @@ cityApp.controller( 'generateCtrl', ['$scope', '$http', '$routeParams',
 
                                                           $http.put('../service/event/'
                                                               + $scope.likeEventId + '/'
-                                                              + $scope.likeUserId , 'true').success( function ( data ) {
+                                                              + $scope.likeUserId + '/', 'true').success( function ( data ) {
 
                                                               location.reload();
                                                           });
 
-
                                                           }
+
+
+                                                      $scope.generateComment= function(){
+
+                                                          $http.post('../service/event/'
+                                                              + $scope.commentEventId + '/'
+                                                              + $scope.commentUserId + '/', ""+ $scope.commentContent).success( function ( data ) {
+
+                                                              location.reload();
+                                                          });
+
+                                                      }
 
 
                                                   }] );

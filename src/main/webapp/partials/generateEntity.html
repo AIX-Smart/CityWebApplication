@@ -25,6 +25,10 @@
                 <button class="btn btn-default" data-toggle="modal" data-target="#likePost">like Post
                 </button>
             </div>
+            <div>
+                <button class="btn btn-default" data-toggle="modal" data-target="#createComment">create Comment
+                </button>
+            </div>
             </div>
         </div>
     </div>
@@ -196,6 +200,53 @@
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-primary" ng-click="likePost()">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="createComment" tabindex="-1" role="dialog" aria-labelledby="createComment" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="AddCommentLabel">Create Comment</h4>
+            </div>
+            <form class="form-horizontal" name="addForm">
+                <div class="modal-body">
+                    <div class="form-group">
+                    <label for="cityName" class="col-sm-3 control-label">Comment UserId</label>
+
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="commentUserId" placeholder="commentUserId"
+                               ng-model="commentUserId" required>
+                    </div>
+                </div>
+                    <div class="form-group">
+                        <label for="cityName" class="col-sm-3 control-label">Comment Content</label>
+
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="commentContent" placeholder="commentContent"
+                                   ng-model="commentContent" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cityName" class="col-sm-3 control-label">Comment EventId</label>
+
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="commentEventId" placeholder="commentEventId"
+                                   ng-model="commentEventId" required>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-primary" ng-click="generateComment()">Save</button>
                 </div>
             </form>
         </div>

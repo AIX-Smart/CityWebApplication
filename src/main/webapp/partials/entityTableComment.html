@@ -4,7 +4,7 @@
             <div class="panel-heading">
                 <div class="row">
                     <div class="col-md-11">
-                        <h4>Events</h4>
+                        <h4>Comments</h4>
                     </div>
                 </div>
             </div>
@@ -19,19 +19,16 @@
                         <th>likeCount</th>
                         <th>authorId</th>
                         <th>locationId</th>
-                        <th>commentCount</th>
                     </thead>
                     <tbody>
-                    <tr ng-repeat="event in events">
-                        <td>{{event.id}}</td>
-                        <td>{{event.content}}</td>
-                        <td>{{event.creationTime}}</td>
-                        <td>{{event.likeCount}}</td>
-                        <td>{{event.authorId}}</td>
-                        <td>{{event.locationId}}</td>
-                        <td>{{event.commentCount}}</td>
-
-
+                    <tr ng-repeat="comment in comments">
+                        <td>{{comment.id}}</td>
+                        <td>{{comment.content}}</td>
+                        <td>{{comment.creationTime}}</td>
+                        <td>{{comment.likeCount}}</td>
+                        <td>{{comment.authorId}}</td>
+                        <td>{{comment.locationId}}</td>
+                        <td>{{comment.commentCount}}</td>
                     </tr>
                     </tbody>
                 </table>
