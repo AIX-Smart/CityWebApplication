@@ -57,18 +57,27 @@ cityApp.controller( 'generateCtrl', ['$scope', '$http', '$routeParams',
                                                               location.reload();
                                                           });
 
-                                                          }
+                                                      }
 
 
                                                       $scope.generateComment= function(){
 
-                                                          $http.post('../service/event/'
+                                                          $http.post('../service/comment/'
                                                               + $scope.commentEventId + '/'
-                                                              + $scope.commentUserId + '/', ""+ $scope.commentContent).success( function ( data ) {
+                                                              + $scope.commentUserId).success( function ( data ) {
 
                                                               location.reload();
                                                           });
+                                                      }
 
+                                                      $scope.generateTag= function(){
+
+                                                          $http.post('../service/tag/'
+                                                              + $scope.tagId + '/'
+                                                              + $scope.tagName).success( function ( data ) {
+
+                                                              location.reload();
+                                                          });
                                                       }
 
 

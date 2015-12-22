@@ -27,6 +27,10 @@ cityApp.config(['$routeProvider',
             templateUrl: 'partials/entityTableComment.html',
             controller: 'CommentTableCtrl'
         }).
+        when('/tagTable', {
+            templateUrl: 'partials/entityTableTag.html',
+            controller: 'TagTableCtrl'
+        }).
 
         otherwise({
             redirectTo: '/cityTable'
