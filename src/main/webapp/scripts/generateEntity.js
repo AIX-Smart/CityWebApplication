@@ -73,7 +73,6 @@ cityApp.controller( 'generateCtrl', ['$scope', '$http', '$routeParams',
                                                       $scope.generateTag= function(){
 
                                                           $http.post('../service/tag/'
-                                                              + $scope.tagId + '/'
                                                               + $scope.tagName).success( function ( data ) {
 
                                                               location.reload();

@@ -46,7 +46,7 @@ cityApp.controller( 'CommentTableCtrl', ['$scope', '$http', '$routeParams',
 ityApp.controller( 'TagTableCtrl', ['$scope', '$http', '$routeParams',
     function ( $scope, $http, $routeParams ) {
 
-        $http.get('../service/tag/getAllTags' ).success( function ( data ) {
+        $http.get('../service/tag/all' ).success( function ( data ) {
 
             $scope.tags = data;
 
