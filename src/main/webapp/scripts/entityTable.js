@@ -4,7 +4,7 @@
 cityApp.controller( 'CityTableCtrl', ['$scope', '$http', '$routeParams',
                                                       function ( $scope, $http, $routeParams ) {
 
-                                                          $http.get('../service/city/getAllCities' ).success( function ( data ) {
+                                                          $http.get('../service/city/all' ).success( function ( data ) {
 
                                                               $scope.cities = data;
 
@@ -14,7 +14,7 @@ cityApp.controller( 'CityTableCtrl', ['$scope', '$http', '$routeParams',
 cityApp.controller( 'LocationTableCtrl', ['$scope', '$http', '$routeParams',
                                       function ( $scope, $http, $routeParams ) {
 
-                                          $http.get('../service/location/' ).success( function ( data ) {
+                                          $http.get('../service/location/all' ).success( function ( data ) {
 
                                               $scope.locations = data;
 
@@ -24,7 +24,7 @@ cityApp.controller( 'LocationTableCtrl', ['$scope', '$http', '$routeParams',
 cityApp.controller( 'EventTableCtrl', ['$scope', '$http', '$routeParams',
                                           function ( $scope, $http, $routeParams ) {
 
-                                              $http.get('../service/event/getAllPosts' ).success( function ( data ) {
+                                              $http.get('../service/event/all' ).success( function ( data ) {
 
                                                   $scope.events = data;
 
@@ -35,7 +35,7 @@ cityApp.controller( 'EventTableCtrl', ['$scope', '$http', '$routeParams',
 cityApp.controller( 'CommentTableCtrl', ['$scope', '$http', '$routeParams',
     function ( $scope, $http, $routeParams ) {
 
-        $http.get('../service/comment/getAllComments' ).success( function ( data ) {
+        $http.get('../service/comment/all' ).success( function ( data ) {
 
             $scope.comments = data;
 

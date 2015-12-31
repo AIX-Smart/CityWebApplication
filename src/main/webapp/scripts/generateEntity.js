@@ -8,7 +8,7 @@ cityApp.controller( 'generateCtrl', ['$scope', '$http', '$routeParams',
                                                       $scope.generateCity= function(){
 
 
-                                                          $http.put('../service/city/' + $scope.cityName  ).success( function ( data ) {
+                                                          $http.post('../service/city/' + $scope.cityName  ).success( function ( data ) {
 
                                                               location.reload();
 
@@ -19,7 +19,7 @@ cityApp.controller( 'generateCtrl', ['$scope', '$http', '$routeParams',
                                                       $scope.generateLocation= function(){
 
 
-                                                          $http.put('../service/location/create/'
+                                                          $http.post('../service/location/create/'
                                                                     + $scope.locationName +'/'
                                                                     + $scope.locationCityId +'/'
                                                                     + $scope.locationStreet +'/'
