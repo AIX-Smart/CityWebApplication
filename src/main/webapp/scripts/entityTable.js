@@ -54,6 +54,18 @@ cityApp.controller( 'CommentTableCtrl', ['$scope', '$http', '$routeParams',
 
         } );
 
+        $scope.deleteComment = function( ){
+
+
+            $http.delete('../service/comment/'+$scope.deleteCommentId +'/'
+                + $scope.deleteUserId).success( function ( data ) {
+
+                location.reload();
+
+            } );
+
+        }
+
     }] );
 
 cityApp.controller( 'TagTableCtrl', ['$scope', '$http', '$routeParams',

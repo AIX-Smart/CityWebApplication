@@ -15,12 +15,11 @@
                     <tr>
                         <th>id</th>
                         <th>content</th>
-                        <th>creatTime</th>
+                        <th>createTime</th>
                         <th>likeCount</th>
                         <th>authorId</th>
                         <th>locationId</th>
                         <th>commentCount</th>
-                        <th>deleted</th>
                     </thead>
                     <tbody>
                     <tr ng-repeat="event in events">
@@ -31,7 +30,6 @@
                         <td>{{event.authorId}}</td>
                         <td>{{event.locationId}}</td>
                         <td>{{event.commentCount}}</td>
-                        <td>{{event.deleted}}</td>
                         <div>
                             <button class="btn btn-default" data-toggle="modal" data-target="#deleteEvent">
                                 <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
