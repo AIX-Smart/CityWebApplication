@@ -30,7 +30,20 @@ cityApp.controller( 'EventTableCtrl', ['$scope', '$http', '$routeParams',
 
                                               } );
 
-                                          }] );
+                                              $scope.deleteEvent = function( ){
+
+
+                                                  $http.delete('../service/event/'+$scope.deleteEventId +'/'
+                                                      + $scope.deleteUserId).success( function ( data ) {
+
+                                                      location.reload();
+
+                                                  } );
+
+                                              }
+
+                                          }
+] );
 
 cityApp.controller( 'CommentTableCtrl', ['$scope', '$http', '$routeParams',
     function ( $scope, $http, $routeParams ) {
@@ -43,7 +56,7 @@ cityApp.controller( 'CommentTableCtrl', ['$scope', '$http', '$routeParams',
 
     }] );
 
-ityApp.controller( 'TagTableCtrl', ['$scope', '$http', '$routeParams',
+cityApp.controller( 'TagTableCtrl', ['$scope', '$http', '$routeParams',
     function ( $scope, $http, $routeParams ) {
 
         $http.get('../service/tag/all' ).success( function ( data ) {

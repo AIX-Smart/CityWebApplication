@@ -20,6 +20,7 @@
                         <th>authorId</th>
                         <th>locationId</th>
                         <th>commentCount</th>
+                        <th>deleted</th>
                     </thead>
                     <tbody>
                     <tr ng-repeat="event in events">
@@ -30,12 +31,50 @@
                         <td>{{event.authorId}}</td>
                         <td>{{event.locationId}}</td>
                         <td>{{event.commentCount}}</td>
+                        <td>{{event.deleted}}</td>
+                        <div>
+                            <button class="btn btn-default" data-toggle="modal" data-target="#deleteEvent">
+                                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                            </button>
+                        </div>
 
 
                     </tr>
                     </tbody>
                 </table>
             </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="deleteEvent" tabindex="-1" role="dialog" aria-labelledby="deleteEvent" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="AddTagLabel">Delete Event</h4>
+            </div>
+            <form class="form-horizontal" name="addForm">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Event Id</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="eventId" placeholder="Event Id"
+                                   ng-model="deleteEventId" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">UserId</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="userId" placeholder="User Id"
+                                   ng-model="deleteUserId" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" ng-click="deleteEvent()">Save</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
