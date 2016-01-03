@@ -62,9 +62,9 @@ cityApp.controller( 'generateCtrl', ['$scope', '$http', '$routeParams',
 
                                                       $scope.generateComment= function(){
 
-                                                          $http.post('../service/comment/'
+                                                          $http.post('../service/event/'
                                                               + $scope.commentEventId + '/'
-                                                              + $scope.commentUserId).success( function ( data ) {
+                                                              + $scope.commentUserId, $scope.commentContent).success( function ( data ) {
 
                                                               location.reload();
                                                           });
