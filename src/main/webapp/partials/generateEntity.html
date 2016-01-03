@@ -33,6 +33,14 @@
                 <button class="btn btn-default" data-toggle="modal" data-target="#createTag">create Tag
                 </button>
             </div>
+            <div>
+                <button class="btn btn-default" data-toggle="modal" data-target="#addTag">add Tag to Location
+                </button>
+            </div>
+            <div>
+                <button class="btn btn-default" data-toggle="modal" data-target="#removeTag">remove Tag from Location
+                </button>
+            </div>
             </div>
         </div>
     </div>
@@ -276,6 +284,70 @@
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-primary" ng-click="generateTag()">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="addTag" tabindex="-1" role="dialog" aria-labelledby="addTag" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="addTagToLocation">Add tag to Location</h4>
+            </div>
+            <form class="form-horizontal" name="addForm">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="cityName" class="col-sm-3 control-label">Location Id</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="addLocationId" placeholder="locationId"
+                                   ng-model="locationId" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cityName" class="col-sm-3 control-label">Tag Id</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="addTagId" placeholder="tagId"
+                                   ng-model="tagId" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" ng-click="addTagToLocation()">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="removeTag" tabindex="-1" role="dialog" aria-labelledby="removeTag" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="removeTagFromLocation">Remove Tag From Location</h4>
+            </div>
+            <form class="form-horizontal" name="addForm">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="cityName" class="col-sm-3 control-label">Location Id</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="removeLocationId" placeholder="locationId"
+                                   ng-model="locationId" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cityName" class="col-sm-3 control-label">Tag Id</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="removeTagId" placeholder="tagId"
+                                   ng-model="tagId" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" ng-click="removeTagFromLocation()">Save</button>
                 </div>
             </form>
         </div>
