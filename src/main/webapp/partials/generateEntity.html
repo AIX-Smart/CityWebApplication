@@ -1,4 +1,3 @@
-
 <div class="row">
     <div class="col-xs-6">
         <div class="panel panel-default">
@@ -41,9 +40,9 @@
                 <button class="btn btn-default" data-toggle="modal" data-target="#removeTag">remove Tag from Location
                 </button>
             </div>
-            </div>
         </div>
     </div>
+</div>
 </div>
 <div class="modal fade" id="createCity" tabindex="-1" role="dialog" aria-labelledby="createCity" aria-hidden="true">
     <div class="modal-dialog">
@@ -96,42 +95,66 @@
                             <input type="text" class="form-control" id="locationCityId" placeholder="locationCityId"
                                    ng-model="locationCityId" required>
                         </div>
-                    </div>    <div class="form-group">
-                    <label for="cityName" class="col-sm-3 control-label">Street</label>
-
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="locationStreet" placeholder="locationStreet"
-                               ng-model="locationStreet" required>
                     </div>
-                </div>    <div class="form-group">
-                    <label for="cityName" class="col-sm-3 control-label">Housenumber</label>
+                    <div class="form-group">
+                        <label for="cityName" class="col-sm-3 control-label">postalCode</label>
 
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="locationHousenumber" placeholder="locationHousenumber"
-                               ng-model="locationHousenumber" required>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="postalCode" placeholder="postalCode"
+                                   ng-model="postalCode" required>
+                        </div>
                     </div>
-                </div>    <div class="form-group">
-                    <label for="cityName" class="col-sm-3 control-label">Phonenumber</label>
+                    <div class="form-group">
+                        <label for="cityName" class="col-sm-3 control-label">Street</label>
 
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="locationPhonenumber" placeholder="locationPhonenumber"
-                               ng-model="locationPhonenumber" required>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="locationStreet" placeholder="locationStreet"
+                                   ng-model="locationStreet" required>
+                        </div>
                     </div>
-                </div>    <div class="form-group">
-                    <label for="cityName" class="col-sm-3 control-label">GPS</label>
+                    <div class="form-group">
+                        <label for="cityName" class="col-sm-3 control-label">Housenumber</label>
 
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="locationGPS" placeholder="locationGPS"
-                               ng-model="locationGPS" required>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="locationHousenumber"
+                                   placeholder="locationHousenumber"
+                                   ng-model="locationHousenumber" required>
+                        </div>
                     </div>
-                </div>    <div class="form-group">
-                    <label for="cityName" class="col-sm-3 control-label">Description</label>
+                    <div class="form-group">
+                        <label for="cityName" class="col-sm-3 control-label">Phonenumber</label>
 
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="locationDescription" placeholder="locationDescription"
-                               ng-model="locationDescription" required>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="locationPhonenumber"
+                                   placeholder="locationPhonenumber"
+                                   ng-model="locationPhonenumber" required>
+                        </div>
                     </div>
-                </div>
+                    <div class="form-group">
+                        <label for="cityName" class="col-sm-3 control-label">GPS</label>
+
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="locationGPS" placeholder="locationGPS"
+                                   ng-model="locationGPS" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cityName" class="col-sm-3 control-label">Description</label>
+
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="locationDescription"
+                                   placeholder="locationDescription"
+                                   ng-model="locationDescription" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cityName" class="col-sm-3 control-label">OpenHours</label>
+
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="openHours" placeholder="openHours"
+                                   ng-model="openHours" required>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-primary" ng-click="generateLocation()">Save</button>
@@ -159,13 +182,13 @@
                         </div>
                     </div>
                     <div class="form-group">
-                    <label for="cityName" class="col-sm-3 control-label">Post Content</label>
+                        <label for="cityName" class="col-sm-3 control-label">Post Content</label>
 
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="postContent" placeholder="postContent"
-                               ng-model="postContent" required>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="postContent" placeholder="postContent"
+                                   ng-model="postContent" required>
+                        </div>
                     </div>
-                </div>
                     <div class="form-group">
                         <label for="cityName" class="col-sm-3 control-label">Post LocationId</label>
 
@@ -219,7 +242,8 @@
 </div>
 
 
-<div class="modal fade" id="createComment" tabindex="-1" role="dialog" aria-labelledby="createComment" aria-hidden="true">
+<div class="modal fade" id="createComment" tabindex="-1" role="dialog" aria-labelledby="createComment"
+     aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -230,13 +254,13 @@
             <form class="form-horizontal" name="addForm">
                 <div class="modal-body">
                     <div class="form-group">
-                    <label for="cityName" class="col-sm-3 control-label">Comment UserId</label>
+                        <label for="cityName" class="col-sm-3 control-label">Comment UserId</label>
 
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="commentUserId" placeholder="commentUserId"
-                               ng-model="commentUserId" required>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="commentUserId" placeholder="commentUserId"
+                                   ng-model="commentUserId" required>
+                        </div>
                     </div>
-                </div>
                     <div class="form-group">
                         <label for="cityName" class="col-sm-3 control-label">Comment Content</label>
 

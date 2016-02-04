@@ -22,11 +22,13 @@ cityApp.controller('generateCtrl', ['$scope', '$http', '$routeParams',
             $http.post('../service/location/create/'
                 + $scope.locationName + '/'
                 + $scope.locationCityId + '/'
+                + $scope.postalCode + '/'
                 + $scope.locationStreet + '/'
                 + $scope.locationPhonenumber + '/'
                 + $scope.locationGPS + '/'
                 + $scope.locationDescription + '/'
-                + $scope.locationHousenumber).success(function (data) {
+                + $scope.locationHousenumber + '/'
+                + $scope.openHours +'/').success(function (data) {
 
                 location.reload();
 
@@ -81,7 +83,7 @@ cityApp.controller('generateCtrl', ['$scope', '$http', '$routeParams',
 
         $scope.addTagToLocation = function () {
 
-            $http.post('../service/location/'
+            $http.put('../service/location/'
                 + $scope.locationId + '/'
                 + $scope.tagId + '/addTag').success(function (data) {
 
@@ -92,7 +94,7 @@ cityApp.controller('generateCtrl', ['$scope', '$http', '$routeParams',
 
         $scope.removeTagFromLocation = function () {
 
-            $http.post('../service/location/'
+            $http.put('../service/location/'
                 + $scope.locationId + '/'
                 + $scope.tagId + '/removeTag').success(function (data) {
 
