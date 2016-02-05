@@ -28,7 +28,8 @@ cityApp.controller('generateCtrl', ['$scope', '$http', '$routeParams',
                 + $scope.locationGPS + '/'
                 + $scope.locationDescription + '/'
                 + $scope.locationHousenumber + '/'
-                + $scope.openHours +'/').success(function (data) {
+                + $scope.userMail + '/'
+                + $scope.openHours +'/', "password").success(function (data) {
 
                 location.reload();
 
